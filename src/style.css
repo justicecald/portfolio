@@ -1,6 +1,5 @@
 section {
     background-color: rgb(60, 102, 102);
-    border: solid rgb(25, 25, 25) 1px;
 }
 
 .hero {
@@ -10,7 +9,6 @@ section {
     color:rgb(255, 246, 233);
     font-size: 30px;
     font-family: monospace;
-
 }
 
 footer {
@@ -145,8 +143,8 @@ p.subtext {
     font-weight: 100;
     font-style: normal;
     color: black;
-    line-height: 15px;
-    padding: 20px;
+    line-height: 12px;
+    margin: 0 auto;
 }
 
 @keyframes fade-in {
@@ -161,8 +159,9 @@ p.subtext {
 }
 
 .logo {
-    height: 230px;
+    height: 150px;
     margin-left: 20px;
+    margin-top: 20px;
     animation: fade-in 1.3s ease-in-out 0.5s 1 normal both;
 }
 
@@ -170,7 +169,7 @@ p.subtext {
     display: flex;
     /* flex-direction: column; */
     height: 100%;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .button {
@@ -187,6 +186,19 @@ p.subtext {
     text-align: center;
 
     transition: all 0.3s;
+}
+
+.contact-submit {
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: normal;
+    padding: 10px 0;
+    margin-left: 10px;
+    color: aliceblue;
+    outline: none;
+    background: transparent;
+    border: 1px solid aliceblue;
+    width: 100%;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -292,6 +304,7 @@ p.subtext {
 .socials {
     line-height: 80px;
     padding-top: 20px;
+    padding-left: 150px;
 
     animation: slide-in-from-right 1.3s ease-in-out 0.5s 1 normal both;
 }
@@ -393,4 +406,56 @@ hr {
 a {
     text-decoration: none;
     color:aliceblue;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid aliceblue;
+    color:aliceblue;
+    background: transparent;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: normal;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: aliceblue;
+    cursor: text;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: normal;
+
+    transition: 0.1s;
+
+}
+
+input:focus~label, 
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+
+}
+
+.contact-form {
+    margin: 0 auto;
 }
